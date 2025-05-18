@@ -299,6 +299,7 @@ section h2 {
     border-radius: 15px;
 }
 
+
 .valor-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -306,6 +307,21 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px){
+    .nosotros-valores{
+        padding: 2rem 0px 0px 0px;
+
+    }
+
+    .valor-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .valor-item:hover {
