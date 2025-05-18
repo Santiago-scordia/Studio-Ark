@@ -875,6 +875,7 @@ footer {
     gap: 10px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    padding: 0 15px;
 }
 
 .filtro-btn {
@@ -906,6 +907,7 @@ footer {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     grid-auto-flow: dense;
 }
 
@@ -914,7 +916,7 @@ footer {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+    transition: all 0.3s ease;
     opacity: 1;
     transform: translateY(0);
     position: relative;
@@ -940,7 +942,7 @@ footer {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 1.2s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .galeria-item:hover img {
@@ -955,6 +957,7 @@ footer {
 .galeria-info h3 {
     margin-bottom: 10px;
     color: #333;
+    font-size: 1.2rem;
 }
 
 .especificaciones {
@@ -966,6 +969,7 @@ footer {
 .especificaciones li {
     margin-bottom: 5px;
     color: #666;
+    font-size: 0.9rem;
 }
 
 /* Testimonios */
@@ -1266,5 +1270,110 @@ footer {
     .carousel-close {
         top: -35px;
         font-size: 25px;
+    }
+}
+
+/* Responsive Design para Galería */
+@media screen and (max-width: 1200px) {
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .galeria-detallada {
+        padding: 60px 15px;
+    }
+
+    .filtros {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filtro-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .galeria-item img {
+        height: 220px;
+    }
+
+    .galeria-info {
+        padding: 15px;
+    }
+
+    .galeria-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .galeria-detallada {
+        padding: 40px 10px;
+    }
+
+    .filtros {
+        gap: 6px;
+        margin-bottom: 25px;
+    }
+
+    .filtro-btn {
+        padding: 5px 12px;
+        font-size: 0.85rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .galeria-item img {
+        height: 200px;
+    }
+
+    .galeria-info {
+        padding: 12px;
+    }
+
+    .galeria-info h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .especificaciones li {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .galeria-detallada {
+        padding: 30px 5px;
+    }
+
+    .filtros {
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .filtro-btn {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+
+    .galeria-grid {
+        gap: 12px;
+    }
+
+    .galeria-item img {
+        height: 180px;
     }
 } 
