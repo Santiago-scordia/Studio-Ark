@@ -1,3 +1,13 @@
+// Parallax effect for hero section
+window.addEventListener('scroll', function() {
+    const heroBg = document.querySelector('.hero-bg');
+    const scrolled = window.pageYOffset;
+    
+    if (heroBg) {
+        heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
@@ -261,5 +271,42 @@ document.addEventListener('DOMContentLoaded', function() {
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
+    }
+});
+
+// Función para animar números
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16); // 60fps
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start) + '+';
+        }
+    }, 16);
+}
+
+// Observer para la sección de estadísticas
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                animateCounter(stat, target);
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observar la sección de estadísticas
+document.addEventListener('DOMContentLoaded', function() {
+    const statsSection = document.querySelector('.nosotros-stats');
+    if (statsSection) {
+        statsObserver.observe(statsSection);
     }
 }); 
