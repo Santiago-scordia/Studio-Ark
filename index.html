@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ark | Diseño y Construcción</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#inicio" class="logo-link">
+                <span class="logo-text">STUDIO</span>
+                <span class="logo-ark">ARK</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria-detallada">Proyectos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Diseñando el Futuro</h1>
+            <p>Transformando espacios en experiencias únicas</p>
+            <a href="#contacto" class="cta-button">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Galería Detallada Section -->
+    <section id="galeria-detallada" class="galeria-detallada">
+        <h2>Nuestros Proyectos</h2>
+        <div class="filtros">
+            <button class="filtro-btn active" data-filter="todos">Todos</button>
+            <button class="filtro-btn" data-filter="residencial">Residencial</button>
+            <button class="filtro-btn" data-filter="comercial">Comercial</button>
+            <button class="filtro-btn" data-filter="industrial">Industrial</button>
+        </div>
+        <div class="galeria-grid">
+            <div class="galeria-item residencial" data-images='[
+                "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+                "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="Proyecto Residencial 2">
+                <div class="galeria-info">
+                    <h3>Villa Contemporánea</h3>
+                    <p>Diseño exclusivo con vistas panorámicas</p>
+                    <ul class="especificaciones">
+                        <li>Área: 400m²</li>
+                        <li>Ubicación: Zona Este</li>
+                        <li>Año: 2023</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galeria-item comercial" data-images='[
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+                "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Proyecto Comercial 2">
+                <div class="galeria-info">
+                    <h3>Oficinas Corporativas</h3>
+                    <p>Espacios de trabajo modernos y funcionales</p>
+                    <ul class="especificaciones">
+                        <li>Área: 2000m²</li>
+                        <li>Ubicación: Distrito Financiero</li>
+                        <li>Año: 2024</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galeria-item residencial" data-images='[
+                "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+                "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3" alt="Proyecto Residencial 3">
+                <div class="galeria-info">
+                    <h3>Apartamento de Lujo</h3>
+                    <p>Diseño interior premium con acabados de alta gama</p>
+                    <ul class="especificaciones">
+                        <li>Área: 180m²</li>
+                        <li>Ubicación: Zona Sur</li>
+                        <li>Año: 2023</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galeria-item industrial" data-images='[
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+                "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Proyecto Industrial 1">
+                <div class="galeria-info">
+                    <h3>Planta Industrial Sostenible</h3>
+                    <p>Diseño industrial con certificación LEED</p>
+                    <ul class="especificaciones">
+                        <li>Área: 3000m²</li>
+                        <li>Ubicación: Zona Industrial</li>
+                        <li>Año: 2024</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galeria-item industrial" data-images='[
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+                "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Proyecto Industrial 2">
+                <div class="galeria-info">
+                    <h3>Centro Logístico</h3>
+                    <p>Instalaciones industriales de última generación</p>
+                    <ul class="especificaciones">
+                        <li>Área: 5000m²</li>
+                        <li>Ubicación: Parque Industrial</li>
+                        <li>Año: 2024</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galeria-item comercial" data-images='[
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+                "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+            ]'>
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Proyecto Comercial 3">
+                <div class="galeria-info">
+                    <h3>Restaurante Gourmet</h3>
+                    <p>Diseño interior sofisticado y acogedor</p>
+                    <ul class="especificaciones">
+                        <li>Área: 300m²</li>
+                        <li>Ubicación: Zona Gastronómica</li>
+                        <li>Año: 2023</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonios-container">
+            <div class="testimonio-card">
+                <div class="testimonio-header">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Cliente 1">
+                    <div class="testimonio-info">
+                        <h3>Carlos Rodríguez</h3>
+                        <p>Proyecto Residencial</p>
+                    </div>
+                </div>
+                <p class="testimonio-texto">"Studio Ark transformó completamente nuestra visión en una realidad. Su atención al detalle y profesionalismo superaron todas nuestras expectativas."</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonio-card">
+                <div class="testimonio-header">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Cliente 2">
+                    <div class="testimonio-info">
+                        <h3>María González</h3>
+                        <p>Proyecto Comercial</p>
+                    </div>
+                </div>
+                <p class="testimonio-texto">"El equipo de Studio Ark demostró un compromiso excepcional con nuestro proyecto. Su creatividad y eficiencia nos permitieron abrir nuestras puertas antes de lo esperado."</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Diseño Arquitectónico</h3>
+                <p>Creación de espacios únicos y funcionales</p>
+            </div>
+            <div class="servicio-card">
+                <i class="fas fa-building"></i>
+                <h3>Construcción</h3>
+                <p>Ejecución de proyectos con los más altos estándares</p>
+            </div>
+            <div class="servicio-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Remodelación</h3>
+                <p>Transformación de espacios existentes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros">
+        <div class="nosotros-content">
+            <h2>Sobre Nosotros</h2>
+            <div class="nosotros-grid">
+                <div class="nosotros-info">
+                    <h3>Nuestra Historia</h3>
+                    <p>Fundado en 2010, Studio Ark nació de la visión de crear espacios que transformen la vida de las personas. Con más de una década de experiencia, nos hemos consolidado como un referente en el diseño arquitectónico y la construcción de calidad.</p>
+                    
+                    <h3>Nuestra Filosofía</h3>
+                    <p>Creemos en la arquitectura como una herramienta para mejorar la calidad de vida. Cada proyecto que emprendemos es una oportunidad para crear espacios que inspiren, funcionen y perduren en el tiempo.</p>
+                    
+                    <div class="nosotros-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Proyectos Completados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Profesionales</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-valores">
+                    <h3>Nuestros Valores</h3>
+                    <div class="valor-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovación</h4>
+                        <p>Buscamos constantemente nuevas soluciones y tecnologías para mejorar nuestros proyectos.</p>
+                    </div>
+                    <div class="valor-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Compromiso</h4>
+                        <p>Nos dedicamos a cumplir con las expectativas de nuestros clientes, superándolas cuando sea posible.</p>
+                    </div>
+                    <div class="valor-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Sostenibilidad</h4>
+                        <p>Incorporamos prácticas sostenibles en cada proyecto para un futuro más verde.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-container">
+            <form class="contacto-form">
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <textarea id="mensaje" name="mensaje" required placeholder="Mensaje"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+            <div class="contacto-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Av. Principal 123, Ciudad</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+123 456 7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@studioarquitectura.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STUDIO ARK</h3>
+                <p>Diseñando el futuro, construyendo el presente.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Studio Ark. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrusel -->
+    <div id="carousel-modal" class="carousel-modal">
+        <div class="carousel-container">
+            <button class="carousel-close">&times;</button>
+            <button class="carousel-prev">&lt;</button>
+            <button class="carousel-next">&gt;</button>
+            <div class="carousel-content">
+                <img class="carousel-image" src="" alt="Imagen del proyecto">
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
