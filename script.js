@@ -40,7 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        
+        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
             behavior: 'smooth'
         });
     });
@@ -50,6 +57,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
+
+// Función para cerrar el menú
+const closeMenu = () => {
+    nav.classList.remove('nav-active');
+    burger.classList.remove('toggle');
+    navLinks.forEach(link => {
+        link.style.animation = '';
+    });
+};
 
 burger.addEventListener('click', () => {
     // Toggle Nav
@@ -66,6 +82,11 @@ burger.addEventListener('click', () => {
     
     // Burger Animation
     burger.classList.toggle('toggle');
+});
+
+// Cerrar menú al hacer clic en un enlace
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
 
 // Form submission handling

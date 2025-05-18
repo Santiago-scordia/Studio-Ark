@@ -196,12 +196,23 @@ section h2 {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .servicio-card i {
     font-size: 3rem;
     color: #333;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover i {
+    transform: scale(1.1);
 }
 
 /* Nosotros */
@@ -311,13 +322,19 @@ section h2 {
 .contacto-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contacto-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input,
@@ -327,6 +344,13 @@ section h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #333;
 }
 
 .form-group textarea {
@@ -341,11 +365,14 @@ section h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .submit-btn:hover {
     background-color: #444;
+    transform: translateY(-2px);
 }
 
 .contacto-info {
@@ -358,11 +385,46 @@ section h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
 }
 
 .info-item i {
     font-size: 1.5rem;
     color: #333;
+}
+
+.info-item p {
+    margin: 0;
+    color: #666;
+}
+
+.mapa-container {
+    margin-top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+}
+
+.mapa-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Footer */
@@ -418,6 +480,10 @@ footer {
     .galeria-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
+
+    .nosotros-grid {
+        gap: 2rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -447,8 +513,7 @@ footer {
     }
 
     .contacto-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .hero-content h1 {
@@ -461,11 +526,74 @@ footer {
 
     .nosotros-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .nosotros-stats {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .galeria-item img {
+        height: 200px;
+    }
+
+    .testimonios-container {
+        gap: 1.5rem;
+    }
+
+    .servicios-grid {
+        gap: 1.5rem;
+    }
+
+    .servicio-card {
+        padding: 1.5rem;
+    }
+
+    .servicio-card i {
+        font-size: 2.5rem;
+    }
+
+    .carousel-container {
+        width: 95%;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .carousel-close {
+        top: -35px;
+        font-size: 25px;
+    }
+
+    .carousel-content {
+        height: 70%;
+    }
+
+    .nosotros-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .valor-item {
+        padding: 1.5rem;
+    }
+
+    .logo-text,
+    .logo-ark {
+        font-size: 1.5rem;
     }
 }
 
@@ -499,7 +627,7 @@ footer {
 
     .galeria-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 1.5rem;
     }
 
     .galeria-item img {
@@ -507,43 +635,15 @@ footer {
     }
 
     .testimonios-container {
-        grid-template-columns: 1fr;
-    }
-
-    .servicios-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .servicio-card {
-        padding: 1.5rem;
-    }
-
-    .servicio-card i {
-        font-size: 2.5rem;
-    }
-
-    .carousel-container {
-        width: 95%;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-        padding: 10px;
-        font-size: 20px;
-    }
-
-    .carousel-close {
-        top: -35px;
-        font-size: 25px;
-    }
-
-    .carousel-content {
-        height: 70%;
+    .servicios-grid {
+        gap: 1.5rem;
     }
 
     .nosotros-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
@@ -552,12 +652,29 @@ footer {
     }
 
     .valor-item {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .logo-text,
     .logo-ark {
         font-size: 1.5rem;
+    }
+
+    .contacto-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contacto-form {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        padding: 1.2rem;
+    }
+    
+    .mapa-container {
+        height: 250px;
     }
 }
 
@@ -585,15 +702,16 @@ footer {
     }
 
     section {
-        padding: 2rem 3%;
+        padding: 2rem 5%;
     }
 
     section h2 {
         font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .galeria-grid {
-        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .galeria-item img {
@@ -609,7 +727,7 @@ footer {
     }
 
     .testimonio-card {
-        padding: 20px;
+        padding: 1.5rem;
     }
 
     .testimonio-header img {
@@ -617,24 +735,33 @@ footer {
         height: 50px;
     }
 
-    .contacto-form input,
-    .contacto-form textarea {
-        padding: 0.8rem;
-        font-size: 0.9rem;
+    .contacto-container {
+        gap: 1.5rem;
     }
-
+    
+    .contacto-form {
+        padding: 1.2rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+    
     .submit-btn {
         padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+    }
+    
+    .info-item {
+        padding: 1rem;
+    }
+    
+    .mapa-container {
+        height: 200px;
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .social-links {
-        justify-content: center;
+        gap: 1.5rem;
     }
 
     .carousel-container {
@@ -650,6 +777,11 @@ footer {
     .carousel-next {
         padding: 8px;
         font-size: 18px;
+    }
+
+    .nosotros-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
@@ -675,6 +807,19 @@ footer {
     .carousel-dot {
         width: 8px;
         height: 8px;
+    }
+
+    section {
+        padding: 1.5rem 5%;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .galeria-grid {
+        gap: 0.8rem;
     }
 }
 
