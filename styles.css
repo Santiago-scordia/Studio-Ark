@@ -193,7 +193,7 @@ section h2 {
 .servicio-card {
     text-align: center;
     padding: 2rem;
-    background: #fff;
+    background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -256,7 +256,7 @@ section h2 {
 
 .stat-item {
     padding: 1.5rem;
-    background: #f9f9f9;
+    background: #fff;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -279,7 +279,7 @@ section h2 {
 }
 
 .nosotros-valores {
-    background: #f9f9f9;
+    background: #fff;
     padding: 2rem;
     border-radius: 15px;
 }
@@ -316,7 +316,7 @@ section h2 {
 
 /* Contacto */
 .contacto {
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .contacto-container {
@@ -855,7 +855,7 @@ footer {
 .filtro-btn {
     padding: 10px 20px;
     border: none;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -877,7 +877,7 @@ footer {
 }
 
 .galeria-item {
-    background: #fff;
+    background: #f9f9f9;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -950,7 +950,7 @@ footer {
 }
 
 .testimonio-card {
-    background: #f9f9f9;
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
