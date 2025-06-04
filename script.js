@@ -20,6 +20,46 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Smooth scrolling function
+function smoothScroll(target) {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Duración de la animación en milisegundos
+    let start = null;
+
+    function animation(currentTime) {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // Función de easing para hacer el movimiento más suave
+        const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        
+        window.scrollTo(0, startPosition + (distance * ease(progress)));
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Add click event listeners to all navigation links, contact button and logo
+document.querySelectorAll('.nav-links a, .cta-button, .logo-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            smoothScroll(targetSection);
+        }
+    });
+});
+
 // Gallery Filtering
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filtro-btn');
@@ -42,23 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.classList.add('hide');
                 }
             });
-        });
-    });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        
-        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-        
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
         });
     });
 });
